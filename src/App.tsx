@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import "@fontsource/noto-sans-kr/400.css"
+import "@fontsource/noto-sans-kr/700.css"
 import './App.css'
 
 function App() {
@@ -8,6 +10,9 @@ function App() {
 
   return (
     <>
+      <h1 className={"text-3xl font-bold underline"}>
+        Hello World
+      </h1>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
