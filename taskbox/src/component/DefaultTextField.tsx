@@ -18,20 +18,20 @@ export default function DefaultTextField({id, isError, onChange, errorMessage, v
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const borderColor = isFocused ? 'border-secondary' : !value ? 'border-mono300' : 'border-primary'
   return (
-    <div>
-    <div className={`text-primary border-b ${borderColor}`}>
-      <input
-        id={id}
-        className={"outline-none"}
-        type={"text"}
-        value={value}
-        placeholder={placeholder}
-        onChange={onChange}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-      />
-      {!!value && <IconButton alt={iconAlt} iconPath={iconPath} onClick={onIconClick}/>}
-    </div>
+    <div className={"relative text-field"}>
+      <div className={`text-primary border-b ${borderColor}`}>
+        <input
+          id={id}
+          className={"outline-none"}
+          type={"text"}
+          value={value}
+          placeholder={placeholder}
+          onChange={onChange}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+        />
+        {!!value && <IconButton alt={iconAlt} iconPath={iconPath} onClick={onIconClick}/>}
+      </div>
       {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   )

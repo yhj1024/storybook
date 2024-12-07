@@ -8,9 +8,10 @@ import Label from "../taskbox/src/component/Label.tsx";
 import DefaultTextField from "../taskbox/src/component/DefaultTextField.tsx";
 
 function App() {
+  const [isError, setIsError] = useState<boolean>(false);
+
   return (
     <div>
-
       <Label htmlFor={'email'}>이메일
         <DefaultTextField
           id="email"
@@ -21,9 +22,10 @@ function App() {
           iconAlt={"delete"}
           iconPath={"https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"}
           onIconClick={() => {}}
-          isError={false}
+          isError={isError}
         />
       </Label>
+      <div className={"my-20"}/>
       <Label htmlFor={'address'}>주소
         <DefaultTextField
           id="address"
@@ -34,10 +36,14 @@ function App() {
           iconAlt={"delete"}
           iconPath={"https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"}
           onIconClick={() => {}}
-          isError={false}
+          isError={isError}
         />
       </Label>
-
+      <div className={"text-center"}>
+      <button onClick={() => {
+        setIsError((prevState) => !prevState)
+      }}>에러변환</button>
+      </div>
     </div>
 
   )

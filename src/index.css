@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/*CLS 를 고려한 CSS */
+@layer components {
+  .text-field > p {
+    @apply absolute;
+  }
+}
+
 body {
   font-family: "Noto Sans KR";
 }
