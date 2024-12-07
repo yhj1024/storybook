@@ -11,15 +11,17 @@ interface IDefaultTextFieldProps {
   iconPath: string;
   onIconClick: React.MouseEventHandler<HTMLButtonElement>;
   isError: boolean
+  id: string
 }
 
-export default function DefaultTextField({isError, onChange, errorMessage, value, placeholder, iconAlt, iconPath, onIconClick} : IDefaultTextFieldProps) {
+export default function DefaultTextField({id, isError, onChange, errorMessage, value, placeholder, iconAlt, iconPath, onIconClick} : IDefaultTextFieldProps) {
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const borderColor = isFocused ? 'border-secondary' : !value ? 'border-mono300' : 'border-primary'
   return (
     <div>
     <div className={`text-primary border-b ${borderColor}`}>
       <input
+        id={id}
         className={"outline-none"}
         type={"text"}
         value={value}

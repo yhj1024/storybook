@@ -4,36 +4,42 @@ import viteLogo from '/vite.svg'
 import "@fontsource/noto-sans-kr/400.css"
 import "@fontsource/noto-sans-kr/700.css"
 import './App.css'
+import Label from "../taskbox/src/component/Label.tsx";
+import DefaultTextField from "../taskbox/src/component/DefaultTextField.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className={"text-3xl font-bold underline"}>
-        Hello World
-      </h1>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+
+      <Label htmlFor={'email'}>이메일
+        <DefaultTextField
+          id="email"
+          onChange={() => {}}
+          errorMessage={'이메일을 확인하세요'}
+          value={""}
+          placeholder={"이메일을 입력하세요"}
+          iconAlt={"delete"}
+          iconPath={"https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"}
+          onIconClick={() => {}}
+          isError={false}
+        />
+      </Label>
+      <Label htmlFor={'address'}>주소
+        <DefaultTextField
+          id="address"
+          onChange={() => {}}
+          errorMessage={'주소를 확인하세요'}
+          value={""}
+          placeholder={"주소를 입력하세요"}
+          iconAlt={"delete"}
+          iconPath={"https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"}
+          onIconClick={() => {}}
+          isError={false}
+        />
+      </Label>
+
+    </div>
+
   )
 }
 

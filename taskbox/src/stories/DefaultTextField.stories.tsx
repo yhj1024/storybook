@@ -19,7 +19,8 @@ export default {
     iconAlt: {control: "clicked", description: "버튼 클릭 이벤트"},
     onChange: {control: "changed", description: "텍스트 필드의 값 변경 이벤트"},
     onIconClick: {control: "clicked", description: "버튼 클릭 이벤트"},
-    isError: {control: "boolean", description: "에러 상태 여부", defaultValue: false}
+    isError: {control: "boolean", description: "에러 상태 여부", defaultValue: false},
+    id: {control: "text", description: "input id", defaultValue: ""}
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
 };
@@ -39,6 +40,7 @@ export const Default = {
     value: "",
     errorMessage: "텍스트를 확인해주세요",
     iconPath: "https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg",
-    isError: false
+    isError: false,
+    id: "email"
   },
 };

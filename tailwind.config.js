@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,tsx,ts}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",  // src 폴더 내 모든 파일
+    "./index.html",
+    "./taskbox/src/**/*.{js,jsx,ts,tsx}"  // taskbox 폴더 내 파일들도 포함
+  ],
   theme: {
     extend: {},
     fontFamily: {
