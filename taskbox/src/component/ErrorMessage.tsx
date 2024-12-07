@@ -1,7 +1,7 @@
-interface ILabelProps {
+interface IErrorMessageProps {
   children: string,
 }
 
-export default function Label({children}: ILabelProps) {
+export default function ErrorMessage({children}: IErrorMessageProps) {
  return <p className={"text-sm text-error"}>{children}</p>
 }
