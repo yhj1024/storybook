@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/*CLS 를 고려한 CSS */
+@layer components {
+  .text-field > p {
+    @apply absolute;
+  }
+  .navigation-title-wrapper > button {
+    @apply mr-[7px];
+  }
+}
+
 body {
   font-family: "Noto Sans KR";
 }
