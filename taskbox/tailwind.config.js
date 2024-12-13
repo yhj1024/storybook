@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {},
     borderRadius: {
-      "primary-button": "5px"
+      "primary-button": "5px",
+      "tag-button": "17.5px"
     },
     fontFamily: {
       body: ["Noto Sans KR"]
@@ -25,7 +26,8 @@ export default {
       mono200: "#bebebe",
       mono300: "#d6d7d9",
       error: "#d01e1e",
-      social: "#395997"
+      social: "#395997",
+      "dark-opacity": "rgba(255, 255, 255, 0.1)"
     }
   },
   plugins: [],
